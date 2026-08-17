@@ -1,0 +1,45 @@
+<!-- Navbar Minimalista (Adaptativo Modo Oscuro) -->
+<nav style="font-family: 'Inter', sans-serif;" 
+     class="fixed top-0 left-0 w-full z-50 bg-white/90 dark:bg-black/80 backdrop-blur-md px-6 py-4 flex items-center justify-between transition-all duration-300 border-b border-transparent dark:border-zinc-800">
+  
+  <!-- Logo Minimalista -->
+  <a href="/" class="text-xl font-bold text-black dark:text-white tracking-tight flex items-center gap-2 transition-colors">
+    <!-- Ícono simple -->
+    <span class="w-7 h-7 bg-black dark:bg-white rounded flex items-center justify-center transition-colors">
+      <svg class="w-4 h-4 text-white dark:text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+      </svg>
+    </span>
+    JD<span class="font-normal text-gray-400 dark:text-zinc-500">Cloud</span>
+  </a>
+
+  <!-- Enlaces de Navegación -->
+  <div class="hidden md:flex items-center gap-8 text-gray-500 dark:text-zinc-400 font-medium text-sm transition-colors">
+    <a href="#servicios" class="hover:text-black dark:hover:text-white transition-colors">Servicios</a>
+    <a href="#quien-soy" class="hover:text-black dark:hover:text-white transition-colors">¿Quién soy?</a>
+    <a href="#contacto" class="hover:text-black dark:hover:text-white transition-colors">Contacto</a>
+  </div>
+
+  <!-- Contenedor Derecho (Botón Modo Oscuro + Comenzar) -->
+  <div class="flex items-center gap-4">
+    
+    <!-- Botón Dark/Light Mode -->
+    <button 
+      (click)="toggleTheme()" 
+      class="p-2 rounded-lg bg-gray-100 dark:bg-zinc-800 text-gray-500 dark:text-zinc-400 hover:bg-gray-200 dark:hover:bg-zinc-700 transition-colors"
+      aria-label="Alternar tema">
+      
+      <svg *ngIf="!isDarkMode" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+      </svg>
+      <svg *ngIf="isDarkMode" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+      </svg>
+    </button>
+
+    <!-- Botón Comenzar -->
+    <a href="#registro" class="bg-black dark:bg-white hover:bg-gray-800 dark:hover:bg-gray-200 text-white dark:text-black px-5 py-2.5 rounded-lg text-sm font-medium transition-colors">
+      Comenzar
+    </a>
+  </div>
+</nav>
